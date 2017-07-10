@@ -50,7 +50,7 @@ class Program
     Console.WriteLine("How many members are in your band?");
     int numberOfMembers = int.Parse(console.ReadLine());
     Console.WriteLine($"{name} and has {numberOfMembers}
-    number of members");
+    number of members"");
   }
 }
 
@@ -58,4 +58,43 @@ Storing variable = setting/asigning.
 Getting value from variable = getting.
 
 Level 3 conditionals in C#.
-TryParse 
+int.tryParse returns true or false depending on if it was able to parse string to
+int.
+
+output parameters = allows setting of variables using keyword out.
+
+static void Main(string[] args)
+{
+  Console.WriteLine("What is the name of your band?");
+  string name = Console.ReadLine();
+  Console.WriteLine("How many people are in your band?")
+  int numberOfMembers = 0;
+  if(!int.tryParse(Console.ReadLine(), out numberOfMembers))
+  {
+    Console.WriteLine("Input was not valid!");
+    Environment.Exit(0);
+  }
+  Console.WriteLine($"{name} has ${numberOfMembers} members");
+}
+
+Methods
+
+Methods = method for breaking up code into logical parts.
+Convention, method names use PascalCase.
+parameter names typically uses camelCase.
+void keyword used for specifying that method does not return anything.
+
+First program with Method.
+class program
+{
+  static void Main(string[] args)
+  {
+    Console.WriteLine("What is the name of your band");
+    string name = Console.readLine();
+    AnnounceBand(name);
+  }
+  void AnnounceBand(string bandName)
+  {
+    Console.WriteLine($"Welcome {bandName} to the stage");
+  }
+}
