@@ -1,1 +1,61 @@
 Section 1.
+
+C# = general purpose OOP, relased by MS in 2002.
+C# = compiled language, strongly typed, .NET language.
+
+ ________                _______________                   ________
+|  C#    |              | Common         |               | Machine  |
+| source |  ---->       | Intermediate   |      ---->    | Code     |
+|________|              | Language       |               |__________|
+
+Allowed to use any language that is compiled to CIL (VB.net, F# etc).
+
+$ dotnet new console -> Program.cs + cs.proj
+(All modern .net applications start with Program.cs).
+
+First C# application
+using System;
+
+class Program
+{
+  static void Main(string[] args) <----Execution starts here.
+  {
+    Console.WriteLine("Hello World!");
+  }
+
+}
+Need to do $ dotnet restore before first run/when dependencies change.
+$dotnet run to start.
+
+Extended program
+class Program
+{
+  static void Main(string[] args) <----Execution starts here.
+  {
+    Console.WriteLine("Type a message!");
+    Console.WriteLine("You said " +console.readLine());
+  }
+
+}
+
+Variables in C#.
+
+using System;
+class Program
+{
+  static void Main(string[] args)
+  {
+    Console.WriteLine("What is the name of your band?");
+    string name = Console.ReadLine();
+    Console.WriteLine("How many members are in your band?");
+    int numberOfMembers = int.Parse(console.ReadLine());
+    Console.WriteLine($"{name} and has {numberOfMembers}
+    number of members");
+  }
+}
+
+Storing variable = setting/asigning.
+Getting value from variable = getting.
+
+Level 3 conditionals in C#.
+TryParse 
