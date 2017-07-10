@@ -98,3 +98,125 @@ class program
     Console.WriteLine($"Welcome {bandName} to the stage");
   }
 }
+Level 2.
+
+Class = blueprint for instance.
+Objeect = actual instance of class.
+
+Classes in C# defined by writing
+
+class clasName
+{
+
+}
+
+common practice in C# to name file after class it contains.
+
+E.g.
+Band.cs ->
+using System;
+class Band
+{
+  string Name;
+  int Musicians;
+  void Announce()
+  {
+    Console.WriteLine($"Welcome {Name} to the stage");
+  }
+}
+
+
+Name, Musicians = instance variables (one set of values for each Object).
+New instance of object created by using keyword new.
+Protection levels specifed through access speciers, controlls what parts can
+be accessed externaly.
+public access modifier allows access to everyone.
+private access modifier only allows access to members of same class.
+Access modifier defaults to private.
+Inside Program.cs
+static void main(string[] args)
+{
+  Console.WriteLine("What is the name of your band?");
+}
+
+public class Band
+{
+  public string Name;
+  public int Musicians;
+  public void Announce()
+  {
+    Console.WriteLine($"Welcome {Name} to the stage");
+  }
+}
+
+Program.case:
+
+...
+static void Main(string[] args)
+{
+  Console.WriteLine("What is your band called?");
+  Band band = new Band();
+  band.Name = Console.ReadLine();
+  band.Announce();
+}
+
+
+Level 3, groups of objects
+
+Musician.cs
+using System;
+
+public class Musician
+{
+  public string Name;
+  public string Instrument;
+  public void Announce()
+  {
+    Console.WriteLine($"{Name} on the {Instrument} !");
+  }
+}
+
+Object Initializer allows instantiation and setting of variables in same line.
+Musician musician{ Name ="Robert", Instrument ="Guitar"};
+
+C# has multiple containers for storing objects.
+
+Some examples
+
+Array (best used for fixed number of strongly-typed objects)
+Musician[] musicians = new musician[2]; (Array of musicians with 2 places);
+Musicians[0] = new Musician{Name:"Robert",Instrument:"Guitar"};
+Musicians[1] = new Musician(Name: "Sarah", Instrument ="Keyboard");
+Arrays can't grow dynamically.
+
+List = container that can grow dynamically.
+List<Musician> Musicians = new List<Musicians>;
+Musicians.Add(new Musician{Name="Robert",Instrument="Guitar"});
+Musicians.Add(new Musician{Name: "Sarah", Instrument ="Keyboard"});
+Musicians.Add(new Musician(Name:"Thomas", Instrument = "Drums"}));
+
+List defined in System.Collections.Generic;
+
+Band.cs
+{
+  using System;
+  using System.Collections.Generic;
+  public class Band
+  {
+    public string Name;
+    public List<Musician> Musicians = new List<Musicians>();
+    public void Announce()
+    {
+      ...
+    }
+    public void AddMuscian()
+    {
+      Musician musician = new Musician(); <--- can also use
+                                          var musician = new Musician() to use
+                                          infered datatype;
+    }
+  }
+}
+
+Level 4
+Loops
