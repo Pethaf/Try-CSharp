@@ -220,3 +220,24 @@ Band.cs
 
 Level 4
 Loops
+
+Different kinds of looping in C#.
+while loop. Runs until condition is false.
+
+while(repeat)
+{
+
+}
+
+Foreach loop. loops through group of objects one by one and runs code for each
+of them.
+
+foreach(var muscian in Musicians)
+{
+  Muscian.Announce();
+}
+
+Level 5 Method overloads
+
+Overload like C++ can have functions with same name but different signatures.
+Return type is not part of method signature. 
